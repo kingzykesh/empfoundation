@@ -270,3 +270,223 @@ body {
       font-size: 2.8rem;
     }
   }
+/* Vision Section */
+.vision-section {
+    padding: 100px 20px;
+    background-color: #FFF5E6;
+  }
+  
+  .vision-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .vision-content {
+    flex: 1;
+  }
+  
+  .vision-image {
+    flex: 1;
+  }
+  
+  .vision-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+  
+  .vision-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #6A0DAD;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    position: relative;
+  }
+  
+  .vision-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #FFD700;
+  }
+  
+  .vision-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #1A1A1A;
+  }
+  
+  .highlight {
+    color: #6A0DAD;
+    font-style: normal;
+  }
+  
+  .bold {
+    color: #6A0DAD;
+    font-weight: 600;
+  }
+  
+  /* Animations */
+  .animate-title {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .animate-text {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  }
+  
+  .animate-image {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+  }
+  
+  .vision-section.in-view .animate-title,
+  .vision-section.in-view .animate-text,
+  .vision-section.in-view .animate-image {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .vision-container {
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .vision-content {
+      order: 2;
+      text-align: center;
+    }
+    
+    .vision-image {
+      order: 1;
+    }
+    
+    .vision-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+/* Mission Section */
+.mission-section {
+    padding: 100px 20px;
+    background-color: #FFF5E6;
+  }
+  
+  .mission-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .mission-content {
+    flex: 1;
+  }
+  
+  .mission-image {
+    flex: 1;
+  }
+  
+  .mission-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+  
+  .mission-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #6A0DAD;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    position: relative;
+  }
+  
+  .mission-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #FFD700;
+  }
+  
+  .mission-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #1A1A1A;
+  }
+  
+  /* Reuse these from Vision section */
+  .highlight {
+    color: #6A0DAD;
+    font-style: normal;
+  }
+  
+  /* Animations - same as Vision but with different timing */
+  .mission-section .animate-title {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  }
+  
+  .mission-section .animate-text {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  }
+  
+  .mission-section .animate-image {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+  }
+  
+  .mission-section.in-view .animate-title,
+  .mission-section.in-view .animate-text,
+  .mission-section.in-view .animate-image {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .mission-container {
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .mission-content {
+      order: 2;
+      text-align: center;
+    }
+    
+    .mission-image {
+      order: 1;
+    }
+    
+    .mission-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }

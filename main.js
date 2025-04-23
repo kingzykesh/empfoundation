@@ -39,3 +39,39 @@ function animateCounters() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', animateCounters);
+
+// Animation trigger
+document.addEventListener('DOMContentLoaded', function() {
+    const visionSection = document.querySelector('.vision-section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+  
+    observer.observe(visionSection);
+  });
+
+// Update your existing animation trigger
+document.addEventListener('DOMContentLoaded', function() {
+    // For Vision Section
+    const visionSection = document.querySelector('.vision-section');
+    // For Mission Section
+    const missionSection = document.querySelector('.mission-section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+  
+    if (visionSection) observer.observe(visionSection);
+    if (missionSection) observer.observe(missionSection);
+  });
